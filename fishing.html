@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tamagotchi</title>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/fishing.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/ui/idle.ico"> 
+  <script src="https://kit.fontawesome.com/a749bd32e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body id = "fishingBody">
+  
+  <div class="location-select">
+    <div class="pixel" id="home" type="button" onclick="window.location.href='game.html'"><p>Home</p></div>
+    <div class="pixel" id="journal" type="button" onclick="window.location.href='fishing-journal.html'"><p>Journal</p></div>
+    <div class="pixel" id="lake" type="button" ><p>Lake</p></div>
+    <div class="pixel" id="river" type="button" ><p>River</p></div>
+    <div class="pixel" id="ocean" type="button" ><p>Ocean</p></div>
+    <div class="pixel" id="cave" type="button" ><p>Cave</p></div>
+  </div>
+
+  <div class="canvasDiv" id= "canvasDiv"></div>
+
+
+  <audio id="fishingMusic" src="../assets/fishing/music/lake-music.mp3" autoplay loop></audio>
+  
+  <div class="background" id="background">
+    <div class="window" id="window" style="position:absolute;">
+      <img src="assets/fishing/lake.png" id="location-image" usemap="#fishing-map" orgwidth="512" orgheight="512"></img>
+      <p class="popUp messageText" id="fishMessage"></p>
+      <img src="../assets/ui/textBox.png" id="textBox" style="visibility: hidden" class="popUp textBox"></img>
+      <img class="popUp speechBubble" src="assets/ui/speechbubble.png" style="position:absolute;">
+        <p class="speechBubbleText"></p>
+        <img class="tamagotchi" id="tamagotchi">
+       <img src="../assets/fishing/fishing-alert.png" style="visibility: hidden;" class="alert fishingAlert" id="fishingAlert"></img>
+    <img src="../assets/fishing/fishingRod.png" id="fishingRod" style="visibility: hidden" class="alert fishingRod"></img>
+    </div>
+
+    
+    
+   
+    <img style="visibility: hidden;" class="fish" id="fish"></img>
+    <img src="../assets/fishing/fishingInterface.png" id="fishingMeter" style="visibility: hidden; image-rendering: pixelated;"></img>
+    <img src="../assets/fishing/fishIcon.png" id="fishImg" style="visibility: hidden"></img>
+    
+    <map name="fishing-map">
+      <area shape="rect" coords="368,340,454,442" class="fishing_teacher" id="fishingMap">
+    </map>
+    
+  </div>
+  
+  
+  <script src="js/fishing.js" type="module"></script>
+  <script src="js/time-logger.js" type="module"></script>
+</body>
+
+</html>

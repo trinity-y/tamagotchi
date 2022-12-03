@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tamagotchi</title>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/game.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/a749bd32e4.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/ui/idle.ico"> 
+</head>
+
+<body>
+  <audio id="houseMusic" src="../assets/songs/default.mp3" autoplay loop></audio>
+  <div class="pixelContainer">
+    <div class="pixel" id="home" type="button" onclick="window.location.href='./game.html'"><p>home</p></div>  <!--<i class="fas fa-home"></i>-->
+    <div id="fishing" type="button" class="pixel" onclick="window.location.href='./fishing.html'"><p>fish</p></div>
+    <div id="shop" type="button" class="pixel" onclick="window.location.href='./shop.html'"><p>shop</p></div>
+    
+
+  </div>
+
+  
+  <div id="background" class="background">
+    <div class="window">
+    <img src="assets/background/default_house.png" id="location-image">
+<!--       <div id="bar" style="background-image:url('assets/ui/bar.png');width:120px;height:28px;position:absolute;bottom:300px;background-size:100%;image-rendering:pixel;">
+      </div> -->
+    </img>
+    <img id='food' class='food' src='./assets/food/slush-1.png'></img>
+    <img id='tamagotchi' class="tamagotchi" ></img>
+    
+    <div id="inventoryMenu" class="inventoryMenu">
+      <div class="tabContainer" id="tabContainer">
+        <div class="inventoryTab" id="inventoryTabAll"><p>all</p></div><div class="inventoryTab" id="inventoryTabBackground"><p>backgrounds</p></div><div class="inventoryTab" id="inventoryTabFood"><p>food</p></div><div class="inventoryTab" id="inventoryTabMusic"><p>music</p></div>
+        </div>
+        <h1 class="inventoryMenuContent" style="margin-top:0;">Inventory</h1> <div class="exitButtonContainer"><h1 id='exit-button' class='inventoryMenuContent' style='justify-content: center;'>x</h1></div>
+        <div id="inventoryItemContainer" class="inventoryItemContainer">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="">
+    
+    <div id="openInventoryButton" class="pixel inventory">
+      <p>inventory</p>
+    </div>
+    <div style="height:30px;">
+      <label class="text" for="giftInput">recipient uid:</label>
+      <input class="text" id="giftInput" style="visiblity:hidden;height:100%;" type="text"><button id="giftButton" style="visibility:visible;height:100%;" class="dialogueButton">gift</button>
+    </div>
+    <div style="position:absolute;bottom:0;right:0;margin:2%;margin-bottom:0;">
+    <div style="display:flex;align-items:center;margin:1%;"><img style="width:20px;height:20px;margin:2%;" src='./assets/ui/coin.png'></img><p class="text" id="balance">loading...</p></div>
+    <div style="display:flex;align-items:center;margin:1%;"><img style="width:20px;height:20px;margin:2%;" src='./assets/ui/health.png'></img><p class="text" id="health">loading...</p></div>
+    <div style="display:flex;align-items:center;margin:1%;"><img style="width:20px;height:20px;margin:2%;" src='./assets/ui/hunger.png'></img><p class="text" id="hunger">loading...</p></div>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;margin:0;">
+    <p class="text" id="uidDisplay">loading...</p>
+    </div>
+  </div>
+  <script src="js/game.js" type="module"></script>
+  <script src="js/time-logger.js" type="module"></script>
+</body>
+
+</html>

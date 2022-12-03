@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tamagotchi</title>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/shop.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/ui/idle.ico"> 
+  <script src="https://kit.fontawesome.com/a749bd32e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <audio id="shopMusic" src="../assets/songs/shop.mp3" autoplay loop></audio>
+  <div class="location-select">
+    <div class="pixel" id="home" type="button" onclick="window.location.href='game.html'"><p>Home</p></div>
+    <div class="pixel" id="fish" type="button" onclick="window.location.href='fishing.html'"><p>Fish</p></div>
+    <div class="pixel" id="shop" type="button" onclick="window.location.href='shop.html'"><p>Shop</p></div>
+  </div>
+
+  
+
+
+  
+  <div class="background">
+    <div class="window">
+      <img src="assets/background/shop.jpg" border="0" width="512" height="512" orgwidth="512" orgheight="512"
+        usemap="#shopmap" alt="">
+
+      <img class="popUp speechBubble" src="assets/ui/speechbubble.png" style="position:absolute;">
+      <p class="speechBubbleText"></p>
+      <button class="dialogueButton popUp" id="buy-button">buy</button>
+      <button class="dialogueButton popUp" id="sell-button">sell</button>
+      <img class="popUp catBubble" src="assets/ui/speechbubble.png" style="position:absolute;">
+      <p class="catBubbleText"></p>
+      
+      <div id="menu" class="shopMenu">
+        <h1 class="shopMenuContent">Shop</h1> 
+        <div class='exitButtonContainer'>
+          <div id='exit-button' class='exitButton'>x</div>
+        </div>
+        <div class="shopItemContainer">
+
+        </div>
+      </div>
+
+
+      <map name="shopmap">
+        <area class="npc" id="attendantMap" alt="Shop Attendant" title="" href="" shape="poly"
+          coords="224,144,212,134,208,131,204,146,193,154,201,168,200,180,195,186,199,198,184,210,230,210,272,210,261,192,262,184,264,177,262,172,262,166,264,153,256,140,249,131"
+          style="outline:none;" target="_blank">
+            <area class="npc" id="sassyCat" alt="sassy cat" title="" href="" coords="330,131,320,140,309,142,298,131,292,137,293,147,296,153,299,162,302,173,303,178,299,189,299,204,300,211,315,210,324,210,334,211,327,181,324,172,331,165,334,160,328,145,346,157,344,164,348,169,351,179,352,188,345,194,354,194,351,196,350,199,347,197" shape="poly">
+      </map>
+      
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;margin:1%;position:absolute;right:0"><img style="width:20px;height:20px;margin:5%;" src='./assets/ui/coin.png'></img><p class="text balance" id="balance">loading...</p></div>
+    </div>
+  <script src="js/shop.js" type="module"></script>
+  <script src="js/time-logger.js" type="module"></script>
+</body>
+
+</html>

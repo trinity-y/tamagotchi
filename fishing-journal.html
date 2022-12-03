@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tamagotchi</title>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/fishing-journal.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/ui/idle.ico"> 
+  <script src="https://kit.fontawesome.com/a749bd32e4.js" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    
+    <div class="location-select">
+      <div class="pixel" id="home" type="button" onclick="window.location.href='game.html'"><p>Home</p></div>
+    <div class="pixel" id="fish" type="button" onclick="window.location.href='fishing.html'"><p>Fish</p></div>
+    <div class="pixel" id="shop" type="button" onclick="window.location.href='shop.html'"><p>Shop</p></div>
+    
+    </div>
+
+    <audio id="journalMusic" src="../assets/fishing/music/journal-music.mp3" autoplay loop></audio>
+
+    <div class="background" id="background">
+    <div class="window" id="window">
+      <img src="assets/fishing/fishingJournal.png" id="location-image" orgwidth="512" orgheight="512"></img>
+
+      
+      <div id="page0" class="page">
+        <p id="lake" class="pageSelect" style="top:20%; left: 15%;">LAKE</p>
+        <p id="river" class="pageSelect" style="top:50%; left: 15%;">RIVER</p>
+        <p id="ocean" class="pageSelect" style="top:20%; left: 60%;">OCEAN</p>
+        <p id="cave" class="pageSelect" style="top:50%; left: 60%;">CAVE</p>
+        <div style="display:flex;align-items: flex-start;margin: 8%;justify-content: left;width: 100%;"><img style="width:20px;height:20px;margin:1.5%;" src='./assets/ui/fish.png'></img><p class="text" id="fishCaught">loading...</p></div>  
+      </div>
+
+      <div id="page1" class="page" style="visibility:hidden;">
+        <i id="back" class="fa-solid fa-arrow-left pageSelect back" ></i>
+     
+        <div class="fishImgDiv" id="fishImgDiv1">
+        </div>
+        <div class="fishPage" id='page1Fish' style="visibility:hidden;">
+          <i id="page1BackFish" class="fa-solid fa-arrow-left pageSelect backFish" ></i>
+          <div class="fishPageDiv">
+            <img id="page1Img" class="fullFishImg">
+            <div class="textDiv">
+            <p id = "page1Text" class="text"></p>
+            </div>
+            <div style="display: flex; width: 100%; height: 100%; padding-top: 77%; padding-left: 155%;position:absolute;">
+               <i id="star1" style="visbility:hidden;"></i>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div id="page2" class="page" style="visibility:hidden;">
+        <i id="back" class="fa-solid fa-arrow-left pageSelect back" ></i>
+        
+        <div class="fishImgDiv" id="fishImgDiv2">
+        </div>
+        <div class="fishPage" id='page2Fish' style="visibility:hidden;">
+          <i id="page2BackFish" class="fa-solid fa-arrow-left pageSelect backFish" ></i>
+
+          <div class="fishPageDiv">
+          <img id="page2Img" class="fullFishImg">
+
+          <div class="textDiv">
+          <p id = "page2Text" class="text"></p>
+          </div>
+            <div style="display: flex; width: 100%; height: 100%; padding-top: 77%; padding-left: 155%;position:absolute;">
+               <i id="star2" style="visbility:hidden;"></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div id="page3" class="page" style="visibility:hidden;">
+        <i id="back" class="fa-solid fa-arrow-left pageSelect back" ></i>
+
+        <div class="fishImgDiv" id="fishImgDiv3">
+        </div>
+        <div class="fishPage" id='page3Fish' style="visibility:hidden;">
+          <i id="page3BackFish" class="fa-solid fa-arrow-left pageSelect backFish" ></i>
+          
+          <div class="fishPageDiv">
+            <img id="page3Img" class="fullFishImg">
+            <div class="textDiv">
+            <p id = "page3Text" class="text"></p>
+            </div>
+            <div style="display: flex; width: 100%; height: 100%; padding-top: 77%; padding-left: 155%;position:absolute;">
+               <i id="star3" style="visbility:hidden;"></i>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div id="page4" class="page" style="visibility:hidden;">
+        <i id="back" class="fa-solid fa-arrow-left pageSelect back" ></i>
+
+        <div class="fishImgDiv" id="fishImgDiv4">
+        </div>
+        <div class="fishPage" id='page4Fish' style="visibility:hidden;">
+          <i id="page4BackFish" class="fa-solid fa-arrow-left pageSelect backFish" ></i>
+
+          <div class="fishPageDiv">
+            <img id="page4Img" class="fullFishImg">
+            <div class="textDiv">
+            <p id = "page4Text" class="text"></p>
+            </div>
+            <div style="display: flex; width: 100%; height: 100%; padding-top: 77%; padding-left: 155%;position:absolute;">
+               <i id="star4" style="visbility:hidden;"></i>
+            </div>
+          </div>
+
+          
+          
+          </div>
+        
+      </div>
+      
+    </div>
+    </div>
+
+
+
+    <script src="js/fishing-journal.js" type="module"></script>
+    <script src="js/time-logger.js" type="module"></script>
+  </body>
+</html>
