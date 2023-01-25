@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+html, body {
+  display:flex;
+  justify-content:center; 
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position:relative;
+  flex-direction:column;
+}
+
+.titleimg {
+  height: 50%;
+  image-rendering: pixelated;
+}
+
+.buttonContainer {
+  display: flex;
+  width:60%;
+  flex-direction:row;
+  padding:0;
+  justify-content:center; 
+  align-items: center;
+}
+
+a { 
+  padding: 0% 5%;
+  font-size: 3rem;
+  color:#000000;
+  font-family: 'VT323', monospace;
+  text-decoration: none;
+}
+a:hover {
+  color: #678e55;
+  text-decoration: underline;
+}
+

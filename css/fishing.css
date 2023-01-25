@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.background img:hover{
+  cursor: url("../assets/cursor/fishing-cursor.png"), default;
+}  
+
+.alert{
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  z-index: 10;
+}
+
+.fish{
+  position: absolute;
+  z-index: 11;
+  image-rendering: pixelated;
+}
+
+.fishingMeter {
+  image-rendering: pixelated;
+}
+
+.fishing_teacher:hover{
+  cursor: url("../assets/cursor/chat-cursor.png"), default;
+  image-rendering: pixelated;
+}
+
+
+
+.canvasDiv{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvasDiv canvas{
+  width: 512px;
+  height: 512px;
+  z-index: 1000;
+}
+
+.canvasDiv canvas:hover{
+  cursor: url("../assets/cursor/fishing-cursor.png"), default;
+}
+
+.textBox{
+  display: flex;
+  width: 512px;
+  height: 128px;
+}
+
+.messageText{
+  z-index: 11;
+  display: flex;
+  width: 512px;
+  height: 128px;
+  top: 12px;
+  visibility: hidden; 
+  justify-content: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+}
+
+.tamagotchi{
+  display: flex;
+  left: 17%;
+  top: 78%;
+  width: 20%;
+  height: 20%;
+}
+
+.fishingRod{
+  top: 74%;
+  left: 31%;
+}
+
+.fishingAlert{
+    top: 60%;
+    left: 17%;
+    image-rendering: pixelated;
+}

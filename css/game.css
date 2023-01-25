@@ -1,0 +1,132 @@
+
+.inventoryMenuContent {
+  z-index: 14;
+  display: flex;
+  font-family: 'VT323', monospace;
+  font-size:20px;
+  color:#ffffff;
+}
+
+h1 {
+  font-size: 100px;
+  color: #000000;
+  text-decoration:bold;
+  display:inline;
+  margin-top:0;
+}
+
+
+.inventoryMenu {
+  width: 80%;
+  height: 50%;
+  position:absolute;
+  left:60px;
+  top:128px;
+  visibility: hidden;
+  justify-content:center;
+  align-items: center;
+  background-size:cover;
+  background-color:rgba(59,43,56, 0.90);
+  z-index:11;
+}
+
+.inventoryItemContainer {
+  justify-content:center;
+  display:flex;
+  width:auto;
+  height:65%;
+  padding:10%;
+  padding-top:0%;
+  padding-bottom:0%;
+  white-space:initial;
+  overflow:scroll;
+  flex-flow: wrap;
+}
+.exitButtonContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+.exitButton {
+    font-family: 'VT323', monospace;
+    background-color: #dac8b3;
+    width: 10%;
+    height: 11%;
+    padding:5%;
+    font-size: 2em;
+}
+.exitButton:hover{
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+.exitButtonContainer:hover{
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+
+.tabContainer {
+  display:flex;
+}
+
+.item:hover{
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+
+.inventoryTab {
+  top: -20px;
+  height:20px;
+  background-color:rgba(59,43,56, 0.90);
+  width:auto;
+  border: rgb(50, 37, 47) solid 1px;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  padding:1%;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+}
+
+.inventoryTab:hover {
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+
+.item {
+  height:0;
+  padding-top:25%;
+  width:15%;
+  margin:1%;
+  position:relative;
+  top:0;left:0;
+  background-size:100%; 
+  image-rendering:pixelated;
+  background-color:rgba(59,43,56, 0.99);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(59,43,56, 0.9); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59,43,56, 0.99); 
+}
+
+.food {
+  visibility:hidden;
+  position: absolute;
+  left: 60px;
+  top:60%;
+  z-index: 10;
+  image-rendering: pixel;
+  width:70px;
+}

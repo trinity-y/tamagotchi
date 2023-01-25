@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body{
+  margin: 0px;
+  display: flex;
+  flex-direction:row;
+  z-index: -1;
+}
+
+a { 
+  padding: 0% 5%;
+  font-size: 3rem;
+  color:#678e55;
+  font-family: 'VT323', monospace;
+  text-decoration: none;
+}
+
+.location-select {
+  position: absolute;
+  display:flex;
+  width: 20%;
+  margin: 5px;
+}
+
+.theme-button {
+  display:flex;
+  padding: 4%;
+  font-size: 2rem;
+  color:#678e55;
+  text-decoration: none;
+  border:none;
+  border-radius:0.3rem;
+  align-content:center;
+  justify-content:center; 
+  font-family: 'VT323', monospace;
+  margin:5px;
+  z-index:2;
+}
+
+.theme-button:hover {
+  background-color: #678e55;
+  color: #ffffff !important;  
+  cursor: pointer;
+}
+
+.theme-button:visited {
+  color: #678e55;
+  text-decoration: none;
+}
+.background{
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} 
+
+
+.background img{  
+  border-radius: 10%;
+  image-rendering: pixelated;
+}
+
+.interact-buttons-container {
+  display: column;
+  justify-content:center;
+  z-index: 0;
+  bottom:0;
+}
+.interact-buttons { /* will change to look different from the nav buttons later */
+  display:flex;
+  padding: 4%;
+  font-size: 2rem;
+  color:#678e55;
+  text-decoration: none;
+  border:none;
+  border-radius:0.3rem;
+  align-content:center;
+  justify-content:center; 
+  font-family: 'VT323', monospace;
+  margin:5px;
+  z-index:2;
+}
+
+.map {
+  z-index:100;
+}
+
+.popUp {
+  z-index:10;
+  position:absolute;
+  top: 0;
+}
+
+.speechBubble {
+  position:absolute;
+  width: 160px;
+  height: 156px;
+  visibility: hidden;
+} 
+
+.speechBubbleText {
+  font-size: 20px;
+  width: 120px;
+  height:110px;
+  font-family: 'VT323', monospace;
+  position: absolute;
+  z-index:11;
+  visibility:hidden; 
+}
+
+.catBubble {
+  position:absolute;
+  width: 160px;
+  height: 168px;
+  visibility: hidden;
+} 
+
+.catBubbleText {
+  font-size: 20px;
+  width: 120px;
+  height:110px;
+  font-family: 'VT323', monospace;
+  position: absolute;
+  z-index:12;
+  visibility:hidden; 
+}
+
+
+.window {
+  position:relative;
+  justify-content: center;display:flex;
+}
+
+.dialogueButton {
+  font-size: 20px;
+  font-family: 'VT323', monospace;
+  background-color:#dac8b3;
+  visibility:hidden;
+  z-index:12;
+}
+
+.tamagotchi { 
+  position:absolute;
+/*   left:-20%; */
+  top:50%;
+  z-index:10;
+  width:150px;
+  user-select: none;
+-moz-user-select: none;
+}
+.tamagotchi:hover {
+  cursor:url('../assets/cursor/heart-cursor.png'), default !important; 
+}
+
+.pixel, .pixel2 {
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: 'VT323';
+
+  z-index: 100;
+  
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  
+  cursor: pointer;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pixel:active, .pixel2:active {
+  top: 2px;
+}
+
+.pixel {
+  line-height: 0;
+  
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  
+  border-style: solid;
+  border-width: 20px;
+  -moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -webkit-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -o-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+}
+
+.pixel p {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: auto;
+  text-align: center;
+  margin: -20px -20px;
+  line-height: 20px;
+  padding: 10px 20px;
+  
+	background: #000000;
+	background:
+		linear-gradient(135deg, transparent 10px, #000000 0) top left,
+		linear-gradient(225deg, transparent 10px, #000000 0) top right,
+		linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+		linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-image:
+		radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+}
+
+.pixel2 {
+  position: relative;
+  display: block;
+  margin: 10px;
+  font-family: 'VT323';
+  text-transform: uppercase;
+  
+  font-size: 25px;
+  color: white;
+}
+
+.pixel2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: black;
+  z-index: -1;
+}
+
+.pixel2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: black;
+  z-index: -1;
+}
+
+.pixel2 {
+  padding: 10px 10px;
+  position: relative;
+  background: black;
+  width: auto;
+  z-index: 2;
+}
+
+.item {
+  visiblity:hidden;
+  left: 0;
+  padding:5%;
+  image-rendering:pixelated;
+  position:absolute;
+  z-index:5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes moveToTamagotchi {
+  0% {
+    visiblity: visible;
+    transform: TranslateX(0);
+  }
+  50% {
+    transform: TranslateX(25%);
+  }
+  100% {
+    transform: TranslateX(50%);
+  } 
+}
+
+.movingFood {
+  animation: moveToTamagotchi;
+}
+
+.text {
+  font-size: 25px;
+  font-family: 'VT323', monospace;
+  z-index:11;
+  margin:1%;
+  right:0;
+}
+
+.balance {
+  padding:2%;
+  margin:2%;
+}

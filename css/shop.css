@@ -1,0 +1,111 @@
+.body {
+  display: flex;
+  flex-direction:column;
+}
+
+
+.npc:hover {
+  cursor: url('../assets/cursor/chat-cursor.png'), default;
+}
+
+.shopMenu {
+  width: 80%;
+  height: 50%;
+  position:absolute;
+  left:60px;
+  top:128px;
+  visibility: hidden;
+  justify-content:center;
+  background-size:cover;
+  background-color:rgba(59,43,56, 0.90);
+}
+
+.shopMenuContent {
+  z-index: 14;
+  display: flex;
+  margin: 5%;
+  font-family: 'VT323', monospace;
+  font-size:20px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration:bold;
+  background:rgba(59,43,56, 0.99);
+  padding:1%;
+}
+
+.shopItemContainer {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
+
+.shopItem {
+  height:0;
+  padding-top:25%;
+  width:25%;
+  margin:1%;
+  position:relative;
+  top:0;left:0;
+  background-size:100%; 
+  image-rendering:pixelated;
+  background-color:rgba(59,43,56, 0.99);
+}
+.shopItem:hover {
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+.exitButtonContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+.exitButton {
+    font-family: 'VT323', monospace;
+    width: 10%;
+    height: 11%;
+    padding:5%;
+    font-size: 2em;
+  color:#ffffff;
+}
+.exitButton:hover{
+  cursor: url('../assets/cursor/default-cursor.png'), default;
+}
+.price {
+  flex-direction:row;
+  display:flex;
+  
+}
+
+.item {
+    position: relative;
+    width: 20%;
+    height: 20%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(59,43,56, 0.9); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59,43,56, 0.99); 
+}
